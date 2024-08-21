@@ -1,0 +1,116 @@
+body{
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    
+}
+
+
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+.header{
+    color: white;
+    font-size: 3rem;
+}
+.mini-header{
+    color: white;
+
+}
+
+ul{
+    width: 100%;
+    padding: 0;
+    color: white;
+
+   
+   
+}
+
+li{
+    position: relative;
+    width: 350px;
+    height:300px;
+    border:3px solid white;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.5s ease-in-out; 
+    opacity: 1; 
+    pointer-events: none;
+}
+
+li:hover::before{
+    opacity: 0;
+}
+
+.card-content{
+    width: 200px;
+    display: flex;
+    justify-content:center;
+    align-items: start;
+    flex-direction: column;
+    text-align: left;
+   
+}
+.card-content > h3{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+}
+.card-content > p {
+    margin: 0 0 0.5em 0;
+    font-weight: normal;
+}
+
+.grid-container{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.card-1::before{
+   content: "Conor Mcgregor";
+    background-image:  url(images/conor\ bild.jpg);
+}
+.card-2::before{
+    content: "Sean O'Malley";
+    background-image: url(images/sean-omalley-image.jpg);
+}
+.card-3::before{
+    content: "Alex Pereira";
+    background-image: url(images/Pereira-img.webp);
+}
+.card-4::before{
+    content: "Max Holloway";
+    background-image: url(images/max-img.webp);
+}
+.card-5::before{
+    content: "Alexander Volkanovski";
+    background-image: url(images/volk-image.jpg);
+}
+
+
